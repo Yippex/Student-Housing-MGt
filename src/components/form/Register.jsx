@@ -10,13 +10,13 @@ const Register = () => {
     <>
     <div className="flex flex-col items-center justify-center">
         <div>
-          <h1 className="text-3xl font-bold  items-center ml-3 pt-[10%]">
+          <h1 className="text-xl font-bold  items-center ml-3 pt-[10%]">
             Register Here
           </h1>
         </div>
-        <div className='flex gap-[16rem] mt-10 items-center '>
-            <button onClick={()=>setAction("Student")} className='text-2xl font-bold border-b-8 border-b-black'>Student</button>
-            <button onClick={()=>setAction('Agent')} className='text-2xl font-bold border-b-8 border-b-black'>Agent</button>
+        <div className='flex gap-10 md:gap-[16rem] mt-10 items-center'>
+            <button onClick={()=>setAction("Student")} className='text-lg  border-b-4 border-b-black-500'>Student</button>
+            <button onClick={()=>setAction('Agent')} className='text-lg  border-b-4 border-b-black-500'>Agent</button>
         </div>
         </div>
 
@@ -24,7 +24,7 @@ const Register = () => {
             action==='Student'? (
                 <form action="" className="top-[5% px-4] shadow-xl px-4 py-4 mt-4">
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Name
                   </label>
                   <input
@@ -33,7 +33,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Email
                   </label>
                   <input
@@ -44,7 +44,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Password
                   </label>
                   <input
@@ -55,7 +55,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Confirm Password
                   </label>
                   <input
@@ -66,7 +66,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Campus
                   </label>
                   <input
@@ -76,10 +76,10 @@ const Register = () => {
                     className="p-2 border bg-white rounded-lg w-full"
                   />
                 </div>
-                <button className="pb-4 w-full p-2 bg-orange-500 rounded-lg text-white text-2xl">
+                <button className=" w-full p-2 bg-orange-500 rounded-lg text-white text-lg">
                   Register
                 </button>
-                <p className="text-xl pt-5 text-center pb-5">
+                <p className="text-lg pt-5 text-center pb-5">
                   Have and account?{" "}
                   {/* {
                     login ===''
@@ -91,9 +91,9 @@ const Register = () => {
               </form>
 
             ):(
-                <form action="" className="top-[5% px-4] shadow-xl px-4 py-4 mt-4">
+                <form action="" className="top-[5% px-4] shadow-xl px-4 py-4 mt-4 p-24">
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Name
                   </label>
                   <input
@@ -102,7 +102,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Email
                   </label>
                   <input
@@ -113,7 +113,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Password
                   </label>
                   <input
@@ -124,7 +124,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-xl">
+                  <label htmlFor="" className="block font-bold text-lg">
                     Confirm Password
                   </label>
                   <input
@@ -135,10 +135,10 @@ const Register = () => {
                   />
                 </div>
                 
-                <button className="pb-4 w-full p-2 bg-orange-500 rounded-lg text-white text-2xl">
+                <button className=" w-full p-2 bg-orange-500 rounded-lg text-white text-lg">
                   Register
                 </button>
-                <p className="text-xl pt-5 text-center pb-5">
+                <p className="text-lg pt-5 text-center pb-5">
                   Have and account?{" "}
                   <Link to="Login" className="text-orange-500 font-bold">
                     Login

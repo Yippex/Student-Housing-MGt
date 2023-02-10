@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/favicon.png";
+import  Logo from '../../assets/Logo.png'
 import Modal from "../../Modal";
 import Login from "../form/Login";
 import Register from "../form/Register";
@@ -11,36 +11,37 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="shadow-sm pb-4">
-        <div className=" flex w-full items-center p-3 pt-3 flex-row justify-between md:justify-between md:px-24">
+      <div className="shadow-sm pb-4 w-full">
+        <div className=" flex  items-center py-3 px-4 justify-between  md:px-24">
           <div>
             <img src={Logo} alt="" className="h-[60px] " />
           </div>
-          <div className="gap-8 items-center hidden md:visible md:flex">
-            <Link to="/" className="text-xl">
-              {" "}
-              Home
-            </Link>
+          
+            <div>
             <input
               type="search"
-              className="border p-2 bg-white rounded-lg text-xl"
+              className="p-2 bg-white rounded-lg text-xl border border-gray-400"
             />
+
+            </div>
+            <div className="flex gap-4">
             <button
               onClick={() => setOpen(true)}
-              className="bg-orange-500 text-white p-3 rounded-lg font-bold text-2xl "
+              className="bg-orange-500 text-white p-2 rounded-lg md:text-2xl  "
             >
               Login
             </button>
             <button
               onClick={() => setOpenModal2(true)}
-              className="text-2xl p-3 border border-orange-500 hover:bg-orange-500 hover:text-white rounded-lg"
+              className=" p-2 border border-orange-500 hover:bg-orange-500 hover:text-white md:text-2xl rounded-lg"
             >
               Register
             </button>
+              
           </div>
-        </div>
+          </div>
       </div>
-      <Modal isVissible={open} onClose={() => setOpen(false)}>
+      <Modal isVissible={open} onClose={() => setOpen(false)} >
         <Login />
       </Modal>
 
