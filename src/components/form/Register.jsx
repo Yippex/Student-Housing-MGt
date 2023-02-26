@@ -1,156 +1,125 @@
-import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
-import Login from './Login'
-
+import React, { useState } from "react";
 
 const Register = () => {
-    const[action, setAction]= useState('Student')
-    const[login, setLogin] =useState(false)
+    const[action, setAction] = useState('Student')
   return (
-    <>
-    <div className="flex flex-col items-center justify-center">
-        <div>
-          <h1 className="text-xl font-bold  items-center ml-3 pt-[10%]">
-            Register Here
-          </h1>
+    <div className="w-full">
+      <div className="bg-rounded-sm flex flex-col justify-center items-center w-full">
+        <div  className="w-[300px] md:w-96 bg-white px-8 py-2 rounded-lg shadow-2xl">
+        <h1 className="text-center text-xl mb-4 font-bold">Register Here</h1>
+        <div className="flex justify-between mb-3">
+            <p className="border-black border-b-2 cursor-pointer" onClick={() => setAction('Student')}>Student</p>
+            <p className="border-black border-b-2 cursor-pointer" onClick={() =>setAction('Agent')}>Agent</p>
         </div>
-        <div className='flex gap-10 md:gap-[16rem] mt-10 items-center'>
-            <button onClick={()=>setAction("Student")} className='text-lg  border-b-4 border-b-black-500'>Student</button>
-            <button onClick={()=>setAction('Agent')} className='text-lg  border-b-4 border-b-black-500'>Agent</button>
+            { action ==='Student'?(  <form action="" >
+          <div className="mb-3">
+            <label htmlFor="" className="block">
+              Name:
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name" 
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="" className="block">Email:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              id="email"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="" className="block">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="**********"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="" className="block">Confirm Password:</label>
+            <input
+              type="password"
+              name="confirm password"
+              id="confirm password"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-3">
+            <button className="w-full bg-blue-500 text-white p-1 rounded-lg">Register</button>
+            <p className="text-center mt-2">Have an account? Login here</p>
+          </div>
+        </form>): (  <form action="" >
+          <div className="mb-2">
+            <label htmlFor="" className="block">
+              Name:
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name" 
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="" className="block">Email:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              id="email"
+              className=" p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="" className="block">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="**********"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="" className="block">Confirm Password:</label>
+            <input
+              type="password"
+              name="confirm password"
+              id="confirm password"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+          <div className="mb-2">
+            <label htmlFor="" className="block">Campus:</label>
+            <input
+              type="text"
+              name="Campus"
+              id="confirm password"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+              placeholder="Gk capmus"
+            />
+          </div>
+          
+          <div className="mb-2">
+            <button className="w-full bg-blue-500 text-white p-1 rounded-lg">Register</button>
+            <p className="text-center mt-2">Have an account? Login here</p>
+          </div>
+        </form>)}
+      
         </div>
-        </div>
+      </div>
+    </div>
+  );
+};
 
-        {
-            action==='Student'? (
-                <form action="" className="top-[5% px-4] shadow-xl px-4 py-4 mt-4">
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Campus
-                  </label>
-                  <input
-                    type="text"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <button className=" w-full p-2 bg-orange-500 rounded-lg text-white text-lg">
-                  Register
-                </button>
-                <p className="text-lg pt-5 text-center pb-5">
-                  Have and account?{" "}
-                  {/* {
-                    login ===''
-                  } */}
-                  <Link to="Login" className="text-orange-500 font-bold">
-                    Login
-                  </Link>
-                </p>
-              </form>
-
-            ):(
-                <form action="" className="top-[5% px-4] shadow-xl px-4 py-4 mt-4 p-24">
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="" className="block font-bold text-lg">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    name=""
-                    id=""
-                    className="p-2 border bg-white rounded-lg w-full"
-                  />
-                </div>
-                
-                <button className=" w-full p-2 bg-orange-500 rounded-lg text-white text-lg">
-                  Register
-                </button>
-                <p className="text-lg pt-5 text-center pb-5">
-                  Have and account?{" "}
-                  <Link to="Login" className="text-orange-500 font-bold">
-                    Login
-                  </Link>
-                </p>
-              </form>
-            )
-        }
-
-       
-    </>
-  )
-}
-
-export default Register
+export default Register;

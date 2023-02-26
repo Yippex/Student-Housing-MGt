@@ -1,56 +1,46 @@
-import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
 
 const Login = () => {
-
-  const [email, setEmail] =useState()
-  const[ password, setPassword] = useState()
-
   return (
-    <>
-     <div className="">
-            <h1 className="text-xl font-bold pb-8 text-center items-center ml-3 pt-[10%]">
-              Login Here
-            </h1>
+    <div>
+
+<div className="w-full">
+      <div className="bg-rounded-sm flex flex-col justify-center items-center w-full">
+        <div  className="w-[300px] md:w-96 bg-white px-6 py-3 rounded-lg shadow-2xl">
+        <h1 className="text-center text-xl mb-4 font-bold">Login</h1>
+
+        <form action="" >
+          
+          <div className="mb-3">
+            <label htmlFor="" className="block">Email:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              id="email"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
           </div>
-          <form action="" className="top-[5% px-4]">
-            <div className="mb-3">
-              <label htmlFor="" className="block font-bold text-xl">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={(e) =>setEmail(e.target.value)}
-                className="p-2 border bg-white rounded-lg w-full"
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="" className="block font-bold text-lg">
-                Password
-              </label>
-              <input
-                type="password"
-                name=""
-                id="password"
-                className="p-2 border bg-white rounded-lg w-full"
-                value={password}
-                onChange={(e)=>setPassword(e.target.value)}
-              />
-            </div>
-            <button className="pb-4 w-full p-2 bg-orange-500 rounded-lg text-white text-lg">
-              Login
-            </button>
-            <p className="text-lg pt-5 text-center pb-5">
-              Don't have an account?{" "}
-              <Link to="Register" className="text-orange-500 font-bold">
-                Register
-              </Link>
-            </p>
-          </form>
-    </>
+          <div className="mb-3">
+            <label htmlFor="" className="block">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="**********"
+              className="p-1 border border-blue-600 w-full rounded-lg"
+            />
+          </div>
+        
+          <div className="mb-3">
+            <button className="w-full bg-blue-500 text-white p-1 rounded-lg">Login</button>
+            <p className="text-center mt-2">Don't have an account? Register here</p>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    </div>
   )
 }
 

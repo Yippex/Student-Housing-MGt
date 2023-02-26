@@ -17,7 +17,7 @@ const NavBar = () => {
             <img src={Logo} alt="" className="h-[60px] " />
           </div>
           
-            <div>
+            <div className="hidden md:visible">
             <input
               type="search"
               className="p-2 bg-white rounded-lg text-xl border border-gray-400"
@@ -27,13 +27,13 @@ const NavBar = () => {
             <div className="flex gap-4">
             <button
               onClick={() => setOpen(true)}
-              className="bg-orange-500 text-white p-2 rounded-lg md:text-2xl  "
+              className="bg-orange-500 text-white p-2 rounded-lg "
             >
               Login
             </button>
             <button
               onClick={() => setOpenModal2(true)}
-              className=" p-2 border border-orange-500 hover:bg-orange-500 hover:text-white md:text-2xl rounded-lg"
+              className=" p-2 border border-orange-500 hover:bg-orange-500 hover:text-white  rounded-lg"
             >
               Register
             </button>
