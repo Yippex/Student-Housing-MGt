@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import  Logo from "../../assets/Logo-removebg-preview.png";
+import  Logoo from "../../assets/Logo-removebg-preview.png";
 import Modal from "../../Modal";
 import Login from "../form/Login";
 import Register from "../form/Register";
@@ -15,7 +15,7 @@ const NavBar = () => {
     <>
         <div className=" flex items-center w-full py-3 px-4 md:px-24 drop-shadow-md justify-between rounded-b-lg h-16 fixed bg-white md:h-24 md:px-10">
           <div>
-            <img src={Logo} alt="" className="h-11 md:h-16" />
+            <img src={Logoo} alt="" className="h-11 md:h-16" />
           </div>
           <div className="flex items-center justify-between gap-4">
             <div>
