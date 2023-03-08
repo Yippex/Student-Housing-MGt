@@ -3,27 +3,26 @@ import HeroImage from "../../../assets/heroImage.png";
 
 const Hero = () => {
   return (
-    <div className=" w-full h-screen pt-12 bg-gray-100 flex items-center">
-      <div className="flex items-center flex-col pt-10 md:pt-0 md:flex-row md:gap-10 px-5 md:px-24 w-full bg-gray-100">
-        <div className="flex flex-col justify-center  pt-4 md:px-5 md:mx-3">
-          <h2 className=" text-base md:text-xl font-semibold capitalize ">
+    <div className=" w-full ">
+      <div className="flex items-center justify-around gap-5 flex-col pt-2 md:flex-row px-3 md:px-24 w-full bg-slate-50">
+        <div className="flex flex-col justify-center  pt-4 ">
+          <h2 className=" text-xl md:text-2xl font-semibold ">
             Let's Hunt for your dream house{" "}
           </h2>
-          <p className=" text-sm md:text-base mt-3 text-justify text-slate-500">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et necessitatibus fugiat perferendis deserunt vero, aspernatur illo ipsa, reprehenderit animi aliquam alias porro sequi aut ea dolore explicabo optio, soluta dolorum.
+          <p className=" text-lg md:text-xl mt-10 text-left ">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
 
           <div className="pt-4">
-            <button className="pointer px-3 py-1.5 border border-blue-100 uppercase text-sm rounded text-slate-500 md:px-5 md:py-3 bg-blue-100 hover:bg-slate-100 transition-all duration-700">
+            <button className="p-3 text-white bg-orange-500 rounded-lg">
               Explore more
             </button>
           </div>
         </div>
-        <div className="">
-          <img src={HeroImage} alt="" className="bg-transparent rounded md:w-screen" />
+        <div>
+          <img src={HeroImage} alt="" />
         </div>
       </div>
-    
     </div>
   );
 };
