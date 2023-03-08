@@ -1,11 +1,9 @@
 import React from "react";
 import HeroImage from "../../../assets/heroImage.png";
-import Search from "../../NavBar/Search";
 
 const Hero = () => {
   return (
     <div className=" w-full h-screen pt-12 bg-gray-100 flex items-center">
-      <Search />
       <div className="flex items-center flex-col pt-10 md:pt-0 md:flex-row md:gap-10 px-5 md:px-24 w-full bg-gray-100">
         <div className="flex flex-col justify-center  pt-4 md:px-5 md:mx-3">
           <h2 className=" text-base md:text-xl font-semibold capitalize ">
