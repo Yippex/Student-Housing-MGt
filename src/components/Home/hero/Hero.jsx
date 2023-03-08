@@ -14,9 +14,9 @@ const Hero = () => {
           </p>
 
           <div className="pt-4">
-            <button className="pointer px-3 py-1.5 border border-blue-100 uppercase text-sm rounded text-slate-500 md:px-5 md:py-3 bg-blue-100 hover:bg-slate-100 transition-all duration-700">
+            <a href="#explore"><button className="pointer px-3 py-1.5 border border-blue-100 uppercase text-sm rounded text-slate-500 md:px-5 md:py-3 bg-blue-100 hover:bg-slate-100 transition-all duration-700">
               Explore more
-            </button>
+            </button></a>
           </div>
         </div>
         <div className="">
